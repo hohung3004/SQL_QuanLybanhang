@@ -1,15 +1,3 @@
-# SQL_QuanLybanhang
-
-## CƠ SỞ DỮ LIỆU QUAN HỆ
-![CƠ SỞ DỮ LIỆU QUAN HỆ](https://drive.google.com/uc?id=1q9my1vWQtV-Y2wLdfceibz5OepdlYM3M)
-
-## BẢNG DỮ LIỆU CHI TIẾT
-![BẢNG DỮ LIỆU CHI TIẾT](https://drive.google.com/uc?id=1KrzGHzVkwugfufb7T85kxELys8E9d0xn)
-
-![BẢNG DỮ LIỆU CHI TIẾT](https://drive.google.com/uc?id=19WQH8SKu0eRAt5hi4mDUeXP2xV_iDc5S)
-
-# Viết ngôn ngữ truy vấn:
-```sql
 CREATE DATABASE QUANLYBANHANG;
 
 CREATE TABLE KHACHHANG (
@@ -304,5 +292,3 @@ WHERE MaH NOT IN (SELECT DISTINCT MaH FROM CHITIETHD WHERE MaHD IN (SELECT DISTI
 SELECT TenKH FROM KHACHHANG 
 WHERE MaKH IN 
 (SELECT MaKH FROM HOADON WHERE MaHD IN (SELECT DISTINCT MaHD FROM CHITIETHD WHERE MaH IN (SELECT  MaH FROM HANGHOA WHERE TenH LIKE N'%BÁNH%')) )
-```
-
